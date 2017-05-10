@@ -1,0 +1,10 @@
+<h1>Rails YELP</h1>
+
+<%= link_to 'new restaurant', new_restaurant_path %>
+
+<% @restaurants.each do |restaurant| %>
+  <div>
+    <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
+    <p><%= restaurant.address %> | <%= restaurant.category %></p>
+  </div>
+<% end %>

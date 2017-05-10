@@ -1,0 +1,11 @@
+<h1><%= @restaurant.name %></h1>
+<h4><%= @restaurant.category %></h4>
+
+<hr>
+
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.phone_number %></p>
+
+<%= link_to 'Home', root_path, class: "btn btn-xs btn-primary" %>
+<%= link_to 'Edit', edit_restaurant_path, class: "btn btn-xs btn-success" %>
+<%= link_to "Delete", restaurant_path(@restaurant), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-xs btn-danger"%>
